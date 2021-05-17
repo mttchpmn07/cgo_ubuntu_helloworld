@@ -21,4 +21,4 @@ jobs:
         run: |
           docker buildx build --push \
             --tag mttchpmn07/cgo_ubuntu_helloworld:latest \
-            --platform linux/amd64,linux/arm/v7,linux/arm64 .
+            --platform linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 .
