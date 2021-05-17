@@ -5,8 +5,6 @@ RUN apt-get -y install build-essential golang
 
 WORKDIR /tmp/app/
 COPY ./app/ /tmp/app/
-RUN pwd
-RUN ls
 RUN go mod download
 RUN CGO_ENABLED=1 go build -o app
 
