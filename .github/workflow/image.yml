@@ -19,6 +19,6 @@ jobs:
       run: echo "${{ docker.DOCKER_PASSWORD }}" | docker login -u "${{ docker.DOCKER_USERNAME }}" --password-stdin
       - name: build the image
       run: |
-        docker buildx build \
+        docker buildx build --push \
           --tag your-username/multiarch-example:latest \
           --platform linux/amd64,linux/arm/v7,linux/arm64 .
